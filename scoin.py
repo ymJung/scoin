@@ -27,5 +27,14 @@ def get_transactions(code, time):
     return res
 
 
+import time
+import urllib
+import json
+
+post_data = {
+    'nonce': int(time.time()*1000),
+    'access_token': cf.get('COINONE', 'API_KEY'),
+
+}
 
 
